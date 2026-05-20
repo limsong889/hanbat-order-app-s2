@@ -12,7 +12,7 @@ services:
       - "8081:8080"
     environment:
       # Phase 1 장애 재현: 아래 값을 변경하고 docker compose up --build 재실행
-      FAULT_DELAY_MS: "3000"       # 예) "8000" → 8초 지연
+      FAULT_DELAY_MS: "0"       # 예) "8000" → 8초 지연
       FAULT_ERROR_RATE: "0.0"   # 예) "0.5"  → 50% 확률 503 에러
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
