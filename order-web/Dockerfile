@@ -1,6 +1,5 @@
-# syntax=docker/dockerfile:1
 # Multi-architecture: linux/amd64, linux/arm64
-FROM --platform=$TARGETPLATFORM nginx:alpine
+FROM nginx:alpine
 
 ARG APP_VERSION=1.0.0
 ENV APP_VERSION=${APP_VERSION}

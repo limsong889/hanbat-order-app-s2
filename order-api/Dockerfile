@@ -1,6 +1,5 @@
-# syntax=docker/dockerfile:1
 # Multi-architecture: linux/amd64, linux/arm64 (Mac M칩 로컬 테스트 포함)
-FROM --platform=$TARGETPLATFORM python:3.11-slim
+FROM python:3.11-slim
 
 # 보안: non-root 사용자
 RUN groupadd -r appuser && useradd -r -g appuser -m appuser
